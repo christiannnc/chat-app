@@ -1,0 +1,21 @@
+.welcome-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.nested-action-text {
+    font-weight: 600;
+}
+
+.start-chat-button {
+    margin-top: 25px;
+    border-radius: 14px;
+    background-color: #FF5A5F;
+    width: 200px;
+    color: white;
+    padding: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}

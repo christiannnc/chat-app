@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useContext, useState } from "react";
+import "./App.css";
+import Welcome from "./screens/Welcome";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Chat from "./screens/Chat";
+
+export const AppContext = createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isChatting, setIsChatting] = useState(false);
+    return (
+        <Router>
+            <AppContext.Provider value={{ isChatting, setIsChatting }}>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <div className="App">
+                                <Welcome />
+                            </div>
+                        }
+                    />
+
+                    <Route path="/chat" element={<Chat />} />
+                </Routes>
+            </AppContext.Provider>
+        </Router>
+    );
 }
 
 export default App;

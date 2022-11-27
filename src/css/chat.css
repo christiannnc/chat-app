@@ -1,0 +1,21 @@
+.heading-container {
+    display: flex;
+    justify-content: center;
+}
+.chat-area {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.message-input {
+    width: 50%;
+    height: 40px;
+    border-radius: 12px;
+    font-family: "Lato", sans-serif;
+    padding: 6px;
+    font-size: 16px;
+    position: fixed;
+}
