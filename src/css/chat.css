@@ -1,13 +1,54 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .heading-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 40%;
 }
+
+.join-room-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.join-room-input {
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    width: 75%;
+    margin-right: 10px;
+}
+
+.join-action {
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
 .chat-area {
-    width: 100vw;
+    width: 50vw;
     height: 75vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .message-input {
@@ -17,5 +58,62 @@
     font-family: "Lato", sans-serif;
     padding: 6px;
     font-size: 16px;
-    position: fixed;
+    resize: none;
+}
+
+.action-area {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.send-button {
+    background-color: #ff5a5f;
+    font-weight: 800;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.system-message {
+    width: 100%;
+}
+
+.system.text {
+    color: black;
+}
+
+.senders-message {
+    background-color: #ff5a5f;
+    padding: 10px;
+    border-radius: 12px;
+    align-self: flex-end;
+}
+
+.received-message {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.text {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: 600;
+}
+
+.senderid {
+    font-size: 12px;
+    color: black;
+    padding: 0;
+    margin: 0;
 }

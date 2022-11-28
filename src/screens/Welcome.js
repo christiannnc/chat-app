@@ -1,14 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 import "../css/welcome.css";
+import usernames from "../constants/usernames";
 
 export default function Welcome() {
     const context = useContext(AppContext);
+    const socket = context.socket;
     const navigate = useNavigate();
 
     const startChat = () => {
         context.setIsChatting(true);
+        context.setRoom(socket.id);
+        context.setUserId(socket.id);
         navigate("/chat");
     };
 
